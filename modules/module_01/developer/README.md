@@ -1,23 +1,11 @@
-# 🟢 HTTP Basics - Developer
+# 🟢 HTTP Basics - Developer Perspective
 
-Secure Coding:
+## Secure Coding Practices
+
 1. Always validate HTTP headers
-2. Use framework HTTP parsing
-3. Never parse requests manually
+2. Use framework-provided HTTP parsing
+3. Avoid manual request parsing
 4. Implement request size limits
 
-Secure Example (Python Flask):
-from flask import Flask, request
+## Secure Example (Python/Flask)
 
-@app.route('/api', methods=['POST'])
-def api():
-    data = request.get_json()
-    if not validate(data):
-        return {'error': 'Invalid'}, 400
-    return process(data)
-
-Best Practices:
-- Use HTTPS everywhere
-- Set security headers
-- Rate limiting
-- Input validation
